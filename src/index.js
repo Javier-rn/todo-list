@@ -1,13 +1,7 @@
 import './reset.css';
 import './style.css';
 
+import { addFolder } from './addFolder';
 import { CreateTodo } from './createTodo.js';
 
-const newTodo1 = new CreateTodo(
-  'Hacer yoga',
-  'Hoy hay que hacer yoga jeje',
-  'hoy',
-  'high'
-);
-
-console.log(newTodo1.format());
+addFolder();
