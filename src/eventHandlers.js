@@ -11,4 +11,15 @@ function addFoldersEvents() {
   });
 }
 
-export { addFoldersEvents };
+import { CreateTodo } from './createTodo.js';
+import { displayTodo } from './display.js';
+
+function addNewTodo(title, description, due, priority) {
+  const currentFolder = document.querySelector('.active');
+
+  const newTodo = new CreateTodo(title, description, due, priority, currentFolder);
+
+  displayTodo(newTodo);
+}
+
+export { addFoldersEvents, addNewTodo };

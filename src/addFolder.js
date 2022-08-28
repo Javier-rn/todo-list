@@ -1,3 +1,5 @@
+import { addFoldersEvents } from './eventHandlers';
+
 function addFolder() {
   const addFolderBtn = document.querySelector('#add-folder-btn');
   const folders = document.querySelector('#folders');
@@ -17,6 +19,7 @@ function addFolder() {
         newLi.textContent = newLiInput.value;
         newLiInput.remove();
         newLiButton.remove();
+        addFoldersEvents();
       });
     }
   });
